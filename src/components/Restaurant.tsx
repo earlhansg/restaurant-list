@@ -22,28 +22,30 @@ const InitialData = {
 export const Restaurant = () => {
   const [data, setData] = useState<InitialDataProps>(InitialData);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get<RestaurantProps[]>(
-          "https://nextjs-orpin-omega-98.vercel.app/api/restaurants"
-        );
-        setData((prev: InitialDataProps) => ({
-          ...prev,
-          loading: true,
-          data: [...response.data],
-        }));
-      } catch {
-        setData((prev: InitialDataProps) => ({ ...prev, error: true }));
-      } finally {
-        setData((prev: InitialDataProps) => ({ ...prev, loading: false }));
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get<RestaurantProps[]>("https://nextjs-orpin-omega-98.vercel.app/api/restaurants");
+  //       setData((prev: InitialDataProps) => ({
+  //         ...prev,
+  //         loading: true,
+  //         data: [...response.data],
+  //       }));
+  //     } catch {
+  //       setData((prev: InitialDataProps) => ({ ...prev, error: true }));
+  //     } finally {
+  //       setData((prev: InitialDataProps) => ({ ...prev, loading: false }));
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
   return (
     <div>
       <RestaurantList />
+      {/* {data.data.map((value) => (
+        <p key={value.restaurant_name}>{value.restaurant_name}</p>
+      ))} */}
     </div>
   );
 };
