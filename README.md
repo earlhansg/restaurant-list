@@ -12,7 +12,7 @@
 ## Here's a brief overview with accompanying images:
 
 - **Initial Load:** The application loads with a highlighted button. Clicking this button reveals or hides a list of restaurants organized by state.
-<img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-1.png" style=" width:700px ; height:500px ">
+<img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-1.png" style=" width:600px ; height:500px ">
 
 - **Hide Feature:** Clicking the "hide" button conceals the list of restaurants, providing a clean interface.
 <img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-2.png" style=" width:700px ; height:500px ">
