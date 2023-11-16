@@ -17,5 +17,5 @@ Here's a brief overview with accompanying images:
 - **Hide Feature:** Clicking the "hide" button conceals the list of restaurants, providing a clean interface.
 <img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-2.png" style=" width:500px ; height:500px ">
 
-- **Restaurant Count:** The highlighted number signifies the count of restaurants in a specific state, such as "Illinois." Clicking on this number provides a detailed list for that state.
+- **Restaurant Count:** The highlighted number signifies the count of restaurants in a specific state, such as "Illinois."
 <img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-3.png" style=" width:400px ; height:200px ">
