@@ -18,4 +18,4 @@ Here's a brief overview with accompanying images:
 <img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-2.png" style=" width:500px ; height:500px ">
 
 - **Restaurant Count:** The highlighted number signifies the count of restaurants in a specific state, such as "Illinois." Clicking on this number provides a detailed list for that state.
-<img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-3.png" style=" width:200px ; height:200px ">
+<img src="https://github.com/earlhansg/restaurant-list/blob/main/images/image-3.png" style=" width:400px ; height:200px ">
