@@ -1,18 +1,9 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+// types
 import { RestaurantList } from "./RestaurantList";
-
-export type RestaurantProps = {
-  restaurant_name: string;
-  state: string;
-};
-
-type InitialDataProps = {
-  loading: boolean;
-  data: RestaurantProps[];
-  state: string[];
-  error: boolean;
-};
+import { InitialDataProps } from "../shared/types/InitialDataProps";
+import { RestaurantProps } from "../shared/types/RestaurantProps";
 
 const InitialData = {
   loading: false,
@@ -57,11 +48,10 @@ export const Restaurant = () => {
   
 
   return (
-    <div>
-      {/* <RestaurantList /> */}
+    <>
       {data.state.map((value, i) => (
         <RestaurantList key={i} state={value} restaurants={filterByState(value)}/>
       ))}
-    </div>
+    </>
   );
 };

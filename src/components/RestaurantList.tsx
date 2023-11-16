@@ -1,12 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-
+// style
 import "../shared/css/RestaurantList.css";
-import { RestaurantProps } from "./Restaurant";
-
-type RestaurantListProp = {
-  state: string;
-  restaurants: RestaurantProps[];
-};
+// types
+import { RestaurantListProp } from "../shared/types/RestaurantListProp";
 
 export const RestaurantList = (props: RestaurantListProp) => {
   const listContainerRef = useRef<HTMLDivElement>(null);
