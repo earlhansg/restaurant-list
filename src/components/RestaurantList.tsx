@@ -13,30 +13,20 @@ export const RestaurantList = (props: RestaurantListProp) => {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    if (listContainerRef.current) {
-      if (toggle) {
-        // const height = (props.restaurants.length - 1) * 55 + 73;
-        // listContainerRef.current.style.height = `${height.toString()}px`;
-        listContainerRef.current.style.height = "auto";
-        listContainerRef.current.classList.add('show');
-
-      } else {
-        listContainerRef.current.classList.remove('show');
-        listContainerRef.current.style.height = "43px";
+    const setContainerHeight = () => {
+      const containerRef = listContainerRef.current;
+  
+      if (containerRef) {
+        const baseHeight = 43;
+        const additionalHeight = (props.restaurants.length - 1) * 55 + 73;
+        const height = toggle ? additionalHeight : baseHeight;
+  
+        containerRef.style.maxHeight = `${Math.max(height, baseHeight)}px`;
       }
-    }
-  }, [toggle]);
-
-  // useEffect(() => {
-  //   const setContainerHeight = () => {
-  //     if (listContainerRef.current) {
-  //       const height = toggle ? (props.restaurants.length - 1) * 55 + 73 : 43;
-  //       listContainerRef.current.style.height = `${height}px`;
-  //     }
-  //   };
-
-  //   setContainerHeight();
-  // }, [toggle, props.restaurants.length]);
+    };
+  
+    setContainerHeight();
+  }, [toggle, props.restaurants.length]);  
 
   return (
     <div className="restaurant-list">
